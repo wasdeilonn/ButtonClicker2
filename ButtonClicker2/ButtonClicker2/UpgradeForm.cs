@@ -17,10 +17,7 @@ namespace ButtonClicker2
             InitializeComponent();
         }
 
-        private void UpgradeForm_Load(object sender, EventArgs e)
-        {
-
-        }
+        private bool ChoiceMade = false;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -30,8 +27,8 @@ namespace ButtonClicker2
 
         private void UpgradeForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason != CloseReason.UserClosing) return;
-            
+            if (e.CloseReason != CloseReason.UserClosing || ChoiceMade) return;
+
 
             DialogResult result = MessageBox.Show(
                 "Are you sure you wanna quit? Remember, 99% of players quit before the big win!",
@@ -44,6 +41,11 @@ namespace ButtonClicker2
                 return;
             }
             Program.SaveAndQuit();
+        }
+
+        private void UpgradeForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
