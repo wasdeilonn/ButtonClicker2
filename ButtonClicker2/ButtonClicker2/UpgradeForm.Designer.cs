@@ -28,36 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            button1 = new Button();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(322, 383);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 60);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Next Round";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Anchor = AnchorStyles.None;
+            button1.Location = new Point(376, 442);
+            button1.Margin = new Padding(4, 3, 4, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(163, 69);
+            button1.TabIndex = 0;
+            button1.Text = "Next Round";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // UpgradeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.button1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "UpgradeForm";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Choose a Reward! If you do not choose a reward I will find you";
-            this.TransparencyKey = System.Drawing.Color.Transparent;
-            this.Load += new System.EventHandler(this.UpgradeForm_Load);
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(915, 532);
+            Controls.Add(button1);
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "UpgradeForm";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Choose a Reward! If you do not choose a reward I will find you";
+            TransparencyKey = Color.Transparent;
+            FormClosing += UpgradeForm_FormClosing;
+            Load += UpgradeForm_Load;
+            ResumeLayout(false);
 
         }
 

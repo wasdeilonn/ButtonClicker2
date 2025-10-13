@@ -1,4 +1,6 @@
-﻿namespace ButtonClicker2
+﻿using System.Runtime.CompilerServices;
+
+namespace ButtonClicker2
 {
     partial class MainForm
     {
@@ -28,89 +30,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.mainButton = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timeLeftBar = new System.Windows.Forms.ProgressBar();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
-            this.consumablePanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            mainButton = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
+            timeLeftBar = new ProgressBar();
+            progressBar = new ProgressBar();
+            consumablePanel = new FlowLayoutPanel();
+            SuspendLayout();
             // 
             // mainButton
             // 
-            this.mainButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mainButton.AutoSize = true;
-            this.mainButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.mainButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.mainButton.FlatAppearance.BorderSize = 0;
-            this.mainButton.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.mainButton.ForeColor = System.Drawing.Color.Black;
-            this.mainButton.Location = new System.Drawing.Point(330, 195);
-            this.mainButton.MinimumSize = new System.Drawing.Size(140, 60);
-            this.mainButton.Name = "mainButton";
-            this.mainButton.Size = new System.Drawing.Size(140, 60);
-            this.mainButton.TabIndex = 0;
-            this.mainButton.Text = "0";
-            this.mainButton.UseVisualStyleBackColor = true;
-            this.mainButton.Click += new System.EventHandler(this.button1_Click);
+            mainButton.Anchor = AnchorStyles.None;
+            mainButton.AutoSize = true;
+            mainButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            mainButton.FlatAppearance.BorderColor = Color.Black;
+            mainButton.FlatAppearance.BorderSize = 0;
+            mainButton.Font = new Font("Bahnschrift", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            mainButton.ForeColor = Color.Black;
+            mainButton.Location = new Point(385, 225);
+            mainButton.Margin = new Padding(4, 3, 4, 3);
+            mainButton.MinimumSize = new Size(163, 69);
+            mainButton.Name = "mainButton";
+            mainButton.Size = new Size(163, 69);
+            mainButton.TabIndex = 0;
+            mainButton.Text = "0";
+            mainButton.UseVisualStyleBackColor = true;
+            mainButton.Click += button1_Click;
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            timer1.Enabled = true;
+            timer1.Interval = 1;
+            timer1.Tick += timer1_Tick;
             // 
             // timeLeftBar
             // 
-            this.timeLeftBar.BackColor = System.Drawing.SystemColors.Control;
-            this.timeLeftBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.timeLeftBar.ForeColor = System.Drawing.Color.Red;
-            this.timeLeftBar.Location = new System.Drawing.Point(0, 0);
-            this.timeLeftBar.Name = "timeLeftBar";
-            this.timeLeftBar.Size = new System.Drawing.Size(800, 26);
-            this.timeLeftBar.Step = 5;
-            this.timeLeftBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.timeLeftBar.TabIndex = 1;
+            timeLeftBar.BackColor = SystemColors.Control;
+            timeLeftBar.Dock = DockStyle.Top;
+            timeLeftBar.ForeColor = Color.Red;
+            timeLeftBar.Location = new Point(0, 0);
+            timeLeftBar.Margin = new Padding(4, 3, 4, 3);
+            timeLeftBar.Name = "timeLeftBar";
+            timeLeftBar.Size = new Size(933, 30);
+            timeLeftBar.Step = 5;
+            timeLeftBar.Style = ProgressBarStyle.Continuous;
+            timeLeftBar.TabIndex = 1;
             // 
             // progressBar
             // 
-            this.progressBar.BackColor = System.Drawing.SystemColors.Control;
-            this.progressBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.progressBar.ForeColor = System.Drawing.Color.Blue;
-            this.progressBar.Location = new System.Drawing.Point(0, 26);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(800, 26);
-            this.progressBar.Step = 5;
-            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar.TabIndex = 2;
+            progressBar.BackColor = SystemColors.Control;
+            progressBar.Dock = DockStyle.Top;
+            progressBar.ForeColor = Color.Blue;
+            progressBar.Location = new Point(0, 30);
+            progressBar.Margin = new Padding(4, 3, 4, 3);
+            progressBar.Name = "progressBar";
+            progressBar.Size = new Size(933, 30);
+            progressBar.Step = 5;
+            progressBar.Style = ProgressBarStyle.Continuous;
+            progressBar.TabIndex = 2;
             // 
             // consumablePanel
             // 
-            this.consumablePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.consumablePanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.consumablePanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.consumablePanel.Location = new System.Drawing.Point(587, 52);
-            this.consumablePanel.Name = "consumablePanel";
-            this.consumablePanel.Size = new System.Drawing.Size(213, 398);
-            this.consumablePanel.TabIndex = 3;
+            consumablePanel.BackColor = Color.FromArgb(224, 224, 224);
+            consumablePanel.Dock = DockStyle.Right;
+            consumablePanel.FlowDirection = FlowDirection.TopDown;
+            consumablePanel.Location = new Point(685, 60);
+            consumablePanel.Margin = new Padding(4, 3, 4, 3);
+            consumablePanel.Name = "consumablePanel";
+            consumablePanel.Size = new Size(248, 459);
+            consumablePanel.TabIndex = 3;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.consumablePanel);
-            this.Controls.Add(this.progressBar);
-            this.Controls.Add(this.timeLeftBar);
-            this.Controls.Add(this.mainButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Button Clicker 2: Electric Boogaloo";
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(933, 519);
+            Controls.Add(consumablePanel);
+            Controls.Add(progressBar);
+            Controls.Add(timeLeftBar);
+            Controls.Add(mainButton);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Button Clicker 2: Electric Boogaloo";
+            FormClosing += MainForm_FormClosing;
+            Load += MainForm_Load;
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

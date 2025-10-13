@@ -28,43 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            button1 = new Button();
+            button2 = new Button();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(222, 200);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 60);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "New Game";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(259, 231);
+            button1.Margin = new Padding(4, 3, 4, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(163, 69);
+            button1.TabIndex = 0;
+            button1.Text = "New Game";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(222, 264);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 60);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "How To Play";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.Location = new Point(259, 305);
+            button2.Margin = new Padding(4, 3, 4, 3);
+            button2.Name = "button2";
+            button2.Size = new Size(163, 69);
+            button2.TabIndex = 1;
+            button2.Text = "How To Play";
+            button2.UseVisualStyleBackColor = true;
             // 
             // MainMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 461);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "MainMenuForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Button Clicker 2: Electric Boogaloo";
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(681, 532);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "MainMenuForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Button Clicker 2: Electric Boogaloo";
+            FormClosing += MainMenuForm_FormClosing;
+            ResumeLayout(false);
 
         }
 

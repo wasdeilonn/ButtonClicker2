@@ -22,5 +22,22 @@ namespace ButtonClicker2
             Program.StartGameEvent();
             this.Hide();
         }
+
+        private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason != CloseReason.UserClosing) return;
+
+            DialogResult result = MessageBox.Show(
+                "Are you sure you wanna quit? Remember, 99% of players quit before the big win!",
+                "Confirm Quit",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.None);
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+                return;
+            }
+            Program.SaveAndQuit();
+        }
     }
 }
