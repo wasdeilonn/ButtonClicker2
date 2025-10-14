@@ -12,22 +12,47 @@ namespace ButtonClicker2
 {
     public partial class ChoiceCard : UserControl
     {
-        public ChoiceCard()
+
+        public string Title;
+        public string Description;
+        public Image Image;
+        public Data.UpgradeType UpgradeType;
+        public ChoiceCard(string Title, string Description, Image Image, Data.UpgradeType UpgradeType)
         {
             InitializeComponent();
+            this.Title = Title;
+            this.Description = Description;
+            this.Image = Image;
+            this.UpgradeType = UpgradeType;
         }
-
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public string Title { get; set; }
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public string Description { get; set; }
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public Image Image { get; set; }
-
 
         private void ChoiceCard_Load(object sender, EventArgs e)
         {
+            nameLabel.Text = Title;
+            descriptionLabel.Text = Description;
+            pictureBox1.Image = Image;
 
+            //HEY
+            //HEYHEYHEY
+            //REPLACE WITH IMAGES LATER
+            switch (UpgradeType)
+            {
+                case Data.UpgradeType.Modifier:
+                    this.BackColor = Color.LightGreen;
+                    break;
+                case Data.UpgradeType.Improvement:
+                    this.BackColor = Color.LightBlue;
+                    break;
+                case Data.UpgradeType.Consumable:
+                    this.BackColor = Color.LightCoral;
+                    break;
+                default:
+                    this.BackColor = SystemColors.Control;
+                    break;
+            }
+            //DO NOT LEAVE THIS UNMODIFIED
+            //HEYHEYHEY
+            //HEY
         }
     }
 }

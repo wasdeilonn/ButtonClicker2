@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             button1 = new Button();
+            panel1 = new Panel();
             SuspendLayout();
             // 
             // button1
@@ -43,12 +44,20 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // panel1
+            // 
+            panel1.Location = new Point(97, 39);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(720, 350);
+            panel1.TabIndex = 1;
+            // 
             // UpgradeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(915, 532);
+            Controls.Add(panel1);
             Controls.Add(button1);
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
@@ -67,5 +76,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
+        private Panel panel1;
     }
 }
