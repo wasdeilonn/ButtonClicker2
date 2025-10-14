@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // button1
@@ -44,21 +43,12 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Anchor = AnchorStyles.None;
-            flowLayoutPanel1.Location = new Point(86, 49);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(742, 363);
-            flowLayoutPanel1.TabIndex = 1;
-            // 
             // UpgradeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(915, 532);
-            Controls.Add(flowLayoutPanel1);
             Controls.Add(button1);
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
@@ -77,6 +67,5 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

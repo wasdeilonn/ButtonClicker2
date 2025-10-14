@@ -1,0 +1,86 @@
+﻿namespace ButtonClicker2
+{
+    partial class ChoiceCard
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            nameLabel = new Label();
+            descriptionLabel = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
+            // 
+            // nameLabel
+            // 
+            nameLabel.Anchor = AnchorStyles.None;
+            nameLabel.Location = new Point(25, 16);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(150, 23);
+            nameLabel.TabIndex = 0;
+            nameLabel.Text = "VERY LONG NAME";
+            nameLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // descriptionLabel
+            // 
+            descriptionLabel.Anchor = AnchorStyles.None;
+            descriptionLabel.Location = new Point(25, 211);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new Size(150, 120);
+            descriptionLabel.TabIndex = 1;
+            descriptionLabel.Text = "This card has a very and I mean incredibly long description due to the fact that I as a game developer have to check if it acutally looks good";
+            descriptionLabel.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.Location = new Point(25, 50);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(150, 150);
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            // 
+            // ChoiceCard
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(pictureBox1);
+            Controls.Add(descriptionLabel);
+            Controls.Add(nameLabel);
+            Name = "ChoiceCard";
+            Size = new Size(200, 350);
+            Load += ChoiceCard_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private Label nameLabel;
+        private Label descriptionLabel;
+        private PictureBox pictureBox1;
+    }
+}
