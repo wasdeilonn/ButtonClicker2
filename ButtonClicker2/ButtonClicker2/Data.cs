@@ -23,11 +23,11 @@ namespace ButtonClicker2
 
         public struct UpgradeData()
         {
-            UpgradeBank upgrade;
-            UpgradeType type;
-            string name = "defaultName";
-            string description = "defaultDesctiption";
-            Image image; //get a few images later
+            public UpgradeBank upgrade;
+            public UpgradeType type;
+            public string name = "defaultName";
+            public string description = "defaultDesctiption";
+            public Image? image; //get a few images later
         }
 
 

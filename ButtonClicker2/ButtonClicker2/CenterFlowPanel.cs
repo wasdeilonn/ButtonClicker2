@@ -17,9 +17,9 @@ namespace ButtonClicker2
             InitializeComponent();
         }
 
-        public void AddCard(string title, string description, Image image, Data.UpgradeType upgradeType)
+        public void AddCard(string title, string description, Image image, Data.UpgradeType upgradeType, UpgradeForm upgradeForm)
         {
-            ChoiceCard card = new ChoiceCard(title, description, image, upgradeType);
+            ChoiceCard card = new ChoiceCard(title, description, image, upgradeType, upgradeForm);
             Controls.Add(card);
         }
 

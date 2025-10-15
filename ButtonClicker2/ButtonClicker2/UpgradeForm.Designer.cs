@@ -46,6 +46,8 @@
             // 
             // centerFlowPanel1
             // 
+            centerFlowPanel1.Anchor = AnchorStyles.None;
+            centerFlowPanel1.BackColor = SystemColors.ControlDark;
             centerFlowPanel1.Location = new Point(54, 25);
             centerFlowPanel1.Name = "centerFlowPanel1";
             centerFlowPanel1.Size = new Size(807, 411);
@@ -59,6 +61,7 @@
             ClientSize = new Size(915, 532);
             Controls.Add(centerFlowPanel1);
             Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
             MinimizeBox = false;

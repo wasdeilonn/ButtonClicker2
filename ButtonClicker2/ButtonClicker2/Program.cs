@@ -17,7 +17,7 @@ namespace ButtonClicker2
             Application.Run(new MainMenuForm());
         }
 
-        public static MainForm mainForm;
+        public static MainForm? mainForm;
 
         public static void GetMainForm(MainForm main)
         {
@@ -54,7 +54,7 @@ namespace ButtonClicker2
 
         public static void TickEvent()
         {
-            if (!EndedRound) 
+            if (!EndedRound)
             {
                 UpdateTimeLeft();
                 UpdateVisuals();
@@ -74,10 +74,10 @@ namespace ButtonClicker2
             double timeValue = ((double)Time / (double)TimeGoal) * 100;
             double valueValue = ((double)ValueCount / (double)ValueGoal) * 100;
 
-            mainForm.mainButton.Text = ValueCount.ToString();
+            mainForm!.mainButton.Text = ValueCount.ToString();
 
-            mainForm.timeLeftBar.Value = (timeValue > 100) ? 100 : (int)timeValue;
-            mainForm.progressBar.Value = (valueValue > 100) ? 100 : (int)valueValue;
+            mainForm!.timeLeftBar.Value = (timeValue > 100) ? 100 : (int)timeValue;
+            mainForm!.progressBar.Value = (valueValue > 100) ? 100 : (int)valueValue;
         }
 
         public static void CheckForEndRound()
@@ -89,7 +89,7 @@ namespace ButtonClicker2
             }
             if (Time >= TimeGoal)
             {
-                EndRound(false); 
+                EndRound(false);
                 return;
             }
         }
@@ -103,7 +103,7 @@ namespace ButtonClicker2
                 upgradeForm.ShowDialog();
                 return;
             }
-            
+
             DefeatForm defeatForm = new DefeatForm();
             defeatForm.ShowDialog();
         }
@@ -118,5 +118,39 @@ namespace ButtonClicker2
             ValueGoal = (int)(ValueGoal * 1.5);
 
         }
+
+        public static void SwitchOnUpgrade(Data.UpgradeData upgradeData)
+        {
+            switch (upgradeData.type)
+            {
+                case Data.UpgradeType.Modifier:
+                    IncrementNum *= 2; //example
+                    break;
+                case Data.UpgradeType.Improvement:
+                    TimeIncrement += 1; //example
+                    break;
+                case Data.UpgradeType.Consumable:
+                    ValueCount += 10; //example
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public static void AddConsumable()
+        {
+
+        }
+
+        public static void AddImprovement()
+        {
+
+        }
+
+        public static void AddModifier()
+        {
+
+        }
+
     }
 }

@@ -17,13 +17,15 @@ namespace ButtonClicker2
         public string Description;
         public Image Image;
         public Data.UpgradeType UpgradeType;
-        public ChoiceCard(string Title, string Description, Image Image, Data.UpgradeType UpgradeType)
+        public UpgradeForm ParentUpgradeForm;
+        public ChoiceCard(string Title, string Description, Image Image, Data.UpgradeType UpgradeType, UpgradeForm parentForm)
         {
             InitializeComponent();
             this.Title = Title;
             this.Description = Description;
             this.Image = Image;
             this.UpgradeType = UpgradeType;
+            ParentUpgradeForm = parentForm;
         }
 
         private void ChoiceCard_Load(object sender, EventArgs e)
@@ -31,6 +33,7 @@ namespace ButtonClicker2
             nameLabel.Text = Title;
             descriptionLabel.Text = Description;
             pictureBox1.Image = Image;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 
             //HEY
             //HEYHEYHEY
@@ -53,6 +56,11 @@ namespace ButtonClicker2
             //DO NOT LEAVE THIS UNMODIFIED
             //HEYHEYHEY
             //HEY
+        }
+
+        private void ChoiceCard_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

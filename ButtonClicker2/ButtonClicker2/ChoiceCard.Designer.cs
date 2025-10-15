@@ -57,11 +57,13 @@
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Location = new Point(25, 50);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(150, 150);
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += ChoiceCard_Click;
             // 
             // ChoiceCard
             // 
