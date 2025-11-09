@@ -35,23 +35,20 @@ namespace ButtonClicker2
             timer1 = new System.Windows.Forms.Timer(components);
             timeLeftBar = new ProgressBar();
             progressBar = new ProgressBar();
-            consumablePanel = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // mainButton
             // 
-            mainButton.Anchor = AnchorStyles.None;
-            mainButton.AutoSize = true;
             mainButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             mainButton.FlatAppearance.BorderColor = Color.Black;
             mainButton.FlatAppearance.BorderSize = 0;
             mainButton.Font = new Font("Bahnschrift", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
             mainButton.ForeColor = Color.Black;
-            mainButton.Location = new Point(385, 225);
+            mainButton.Location = new Point(0, 69);
             mainButton.Margin = new Padding(4, 3, 4, 3);
             mainButton.MinimumSize = new Size(163, 69);
             mainButton.Name = "mainButton";
-            mainButton.Size = new Size(163, 69);
+            mainButton.Size = new Size(384, 80);
             mainButton.TabIndex = 0;
             mainButton.Text = "0";
             mainButton.UseVisualStyleBackColor = true;
@@ -71,7 +68,7 @@ namespace ButtonClicker2
             timeLeftBar.Location = new Point(0, 0);
             timeLeftBar.Margin = new Padding(4, 3, 4, 3);
             timeLeftBar.Name = "timeLeftBar";
-            timeLeftBar.Size = new Size(933, 30);
+            timeLeftBar.Size = new Size(384, 30);
             timeLeftBar.Step = 5;
             timeLeftBar.Style = ProgressBarStyle.Continuous;
             timeLeftBar.TabIndex = 1;
@@ -84,29 +81,17 @@ namespace ButtonClicker2
             progressBar.Location = new Point(0, 30);
             progressBar.Margin = new Padding(4, 3, 4, 3);
             progressBar.Name = "progressBar";
-            progressBar.Size = new Size(933, 30);
+            progressBar.Size = new Size(384, 30);
             progressBar.Step = 5;
             progressBar.Style = ProgressBarStyle.Continuous;
             progressBar.TabIndex = 2;
-            // 
-            // consumablePanel
-            // 
-            consumablePanel.BackColor = Color.FromArgb(224, 224, 224);
-            consumablePanel.Dock = DockStyle.Right;
-            consumablePanel.FlowDirection = FlowDirection.TopDown;
-            consumablePanel.Location = new Point(685, 60);
-            consumablePanel.Margin = new Padding(4, 3, 4, 3);
-            consumablePanel.Name = "consumablePanel";
-            consumablePanel.Size = new Size(248, 459);
-            consumablePanel.TabIndex = 3;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(933, 519);
-            Controls.Add(consumablePanel);
+            ClientSize = new Size(384, 161);
             Controls.Add(progressBar);
             Controls.Add(timeLeftBar);
             Controls.Add(mainButton);
@@ -120,7 +105,6 @@ namespace ButtonClicker2
             FormClosing += MainForm_FormClosing;
             Load += MainForm_Load;
             ResumeLayout(false);
-            PerformLayout();
 
         }
 
@@ -129,7 +113,6 @@ namespace ButtonClicker2
         public System.Windows.Forms.Button mainButton;
         public System.Windows.Forms.ProgressBar progressBar;
         public System.Windows.Forms.ProgressBar timeLeftBar;
-        public System.Windows.Forms.FlowLayoutPanel consumablePanel;
     }
 }
 

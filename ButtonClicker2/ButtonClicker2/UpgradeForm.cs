@@ -45,9 +45,9 @@ namespace ButtonClicker2
 
         private void UpgradeForm_Load(object sender, EventArgs e)
         {
-            centerFlowPanel1.AddCard("Double Clicks", "Your clicks are now twice as effective!", SystemIcons.Information.ToBitmap(), Data.UpgradeType.Modifier, this);
-            centerFlowPanel1.AddCard("Auto Clicker", "You get an auto clicker that clicks once every second!", SystemIcons.Question.ToBitmap(), Data.UpgradeType.Improvement, this);
-            centerFlowPanel1.AddCard("Mega Click", "Your next click counts as 10 clicks!", SystemIcons.Warning.ToBitmap(), Data.UpgradeType.Consumable, this);
+            centerFlowPanel1.AddCard("Double Clicks", "Your clicks are now twice as effective!", SystemIcons.Information.ToBitmap(), Data.UpgradeType.Virus, this);
+            centerFlowPanel1.AddCard("Auto Clicker", "You get an auto clicker that clicks once every second!", SystemIcons.Question.ToBitmap(), Data.UpgradeType.Virus, this);
+            centerFlowPanel1.AddCard("Mega Click", "Your next click counts as 10 clicks!", SystemIcons.Warning.ToBitmap(), Data.UpgradeType.Virus, this);
             button1.Enabled = false;
         }
 

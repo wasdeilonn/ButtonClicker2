@@ -18,6 +18,12 @@ namespace ButtonClicker2
         public Image Image;
         public Data.UpgradeType UpgradeType;
         public UpgradeForm ParentUpgradeForm;
+
+        bool hovered = false;
+        bool clicked = false;
+
+
+
         public ChoiceCard(string Title, string Description, Image Image, Data.UpgradeType UpgradeType, UpgradeForm parentForm)
         {
             InitializeComponent();
@@ -34,31 +40,26 @@ namespace ButtonClicker2
             descriptionLabel.Text = Description;
             pictureBox1.Image = Image;
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-
-            //HEY
-            //HEYHEYHEY
-            //REPLACE WITH IMAGES LATER
-            switch (UpgradeType)
-            {
-                case Data.UpgradeType.Modifier:
-                    this.BackColor = Color.LightGreen;
-                    break;
-                case Data.UpgradeType.Improvement:
-                    this.BackColor = Color.LightBlue;
-                    break;
-                case Data.UpgradeType.Consumable:
-                    this.BackColor = Color.LightCoral;
-                    break;
-                default:
-                    this.BackColor = SystemColors.Control;
-                    break;
-            }
-            //DO NOT LEAVE THIS UNMODIFIED
-            //HEYHEYHEY
-            //HEY
         }
 
         private void ChoiceCard_Click(object sender, EventArgs e)
+        {
+            clicked = true;
+        }
+
+        private void Hover_Begin(object sender, EventArgs e)
+        {
+            hovered = true;
+            this.Size = new Size(this.Size.Width + 20, this.Size.Height + 20);
+        }
+
+        private void Hover_End(object sender, EventArgs e)
+        {
+            hovered = false;
+            this.Size = new Size(this.Size.Width - 20, this.Size.Height - 20);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
             
         }

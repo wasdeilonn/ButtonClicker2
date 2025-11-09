@@ -69,7 +69,6 @@
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterParent;
             Text = "Choose a Reward! If you do not choose a reward I will find you";
-            TransparencyKey = Color.Transparent;
             FormClosing += UpgradeForm_FormClosing;
             Load += UpgradeForm_Load;
             ResumeLayout(false);

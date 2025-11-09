@@ -121,36 +121,9 @@ namespace ButtonClicker2
 
         public static void SwitchOnUpgrade(Data.UpgradeData upgradeData)
         {
-            switch (upgradeData.type)
-            {
-                case Data.UpgradeType.Modifier:
-                    IncrementNum *= 2; //example
-                    break;
-                case Data.UpgradeType.Improvement:
-                    TimeIncrement += 1; //example
-                    break;
-                case Data.UpgradeType.Consumable:
-                    ValueCount += 10; //example
-                    break;
-                default:
-                    break;
-            }
+            
         }
 
-        public static void AddConsumable()
-        {
-
-        }
-
-        public static void AddImprovement()
-        {
-
-        }
-
-        public static void AddModifier()
-        {
-
-        }
 
     }
 }

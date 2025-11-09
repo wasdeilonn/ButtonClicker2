@@ -9,14 +9,28 @@ namespace ButtonClicker2
 {
     public class Data
     {
-        public enum UpgradeType
+        public enum SellType
         {
-            Modifier,
-            Improvement,
-            Consumable
+            Regular,
+            Roll,
+            Time
         }
 
-        public enum UpgradeBank
+        public enum SellValueType
+        {
+            Number,
+            GoalPercent,
+            PointsPercent
+        }
+
+        public enum ProduceType
+        {
+            OverTime,
+            Click,
+            PoolToSell
+        }
+
+        public enum UpgradeType
         {
             Koki, //high sell price, low produce
             Baliko, //low sell price, high produce
@@ -34,15 +48,23 @@ namespace ButtonClicker2
 
         public struct UpgradeData()
         {
-            public UpgradeBank upgrade;
-            public UpgradeType type;
+            public UpgradeType upgrade;
             public string name = "defaultName";
             public string description = "defaultDesctiption";
             public Image? image; //get a few images later
+
+            public int? sellPrice;
+            public SellType sellType = SellType.Regular;
+            public SellValueType sellValueType = SellValueType.Number;
+
+            public int? produce;
+            public ProduceType produceType = ProduceType.OverTime;
+
+            public Dictionary<UpgradeType, int>? modifiers;
         }
 
 
-        public Dictionary<UpgradeBank, UpgradeData> Upgrades = new Dictionary<UpgradeBank, UpgradeData>()
+        public Dictionary<UpgradeType, UpgradeData> Upgrades = new Dictionary<UpgradeType, UpgradeData>()
         {
             //fill out later
         };

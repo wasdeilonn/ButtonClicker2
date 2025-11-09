@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             nameLabel = new Label();
             descriptionLabel = new Label();
             pictureBox1 = new PictureBox();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -65,6 +67,12 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += ChoiceCard_Click;
             // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1;
+            timer1.Tick += timer1_Tick;
+            // 
             // ChoiceCard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -75,6 +83,8 @@
             Name = "ChoiceCard";
             Size = new Size(200, 350);
             Load += ChoiceCard_Load;
+            MouseEnter += Hover_Begin;
+            MouseLeave += Hover_End;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -84,5 +94,6 @@
         private Label nameLabel;
         private Label descriptionLabel;
         private PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
