@@ -65,7 +65,6 @@
             pictureBox1.Size = new Size(150, 150);
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += ChoiceCard_Click;
             // 
             // timer1
             // 
@@ -83,8 +82,7 @@
             Name = "ChoiceCard";
             Size = new Size(200, 350);
             Load += ChoiceCard_Load;
-            MouseEnter += Hover_Begin;
-            MouseLeave += Hover_End;
+            Click += ChoiceCard_Click;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }

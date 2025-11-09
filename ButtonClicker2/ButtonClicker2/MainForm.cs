@@ -35,7 +35,7 @@ namespace ButtonClicker2
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason != CloseReason.UserClosing) return;
-
+            
             DialogResult result = MessageBox.Show(
                 "Are you sure you wanna quit? Remember, 99% of players quit before the big win!",
                 "Confirm Quit",
